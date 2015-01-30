@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <title>Draw Pad</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td colspan="8">
+                    <canvas id="mycanvas" style="border: 2px solid #000; cursor: crosshair;" width="600px"
+                        height="600px" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Shape
+                </td>
+                <td>
+                    <select id="ddlShape">
+                        <option value="1">Line</option>
+                        <option value="2">Rectangle</option>
+                        <option value="3">Circle</option>
+                        <option value="4">Pencil</option>
+                        <option value="5">Eraser</option>
+                    </select>
+                </td>
+                <td>
+                    Line Color
+                </td>
+                <td>
+                    <select id="ddlColor">
+                        <option value="Red">Red</option>
+                        <option value="Green">Green</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Black">Black</option>
+                    </select>
+                </td>
+                <td>
+                    Fill Color
+                </td>
+                <td>
+                    <select id="ddlFillColor">
+                        <option value="#ff0000">Red</option>
+                        <option value="#00ff00">Green</option>
+                        <option value="#0000FF">Blue</option>
+                        <option value="#000000">Black</option>
+                        <option value="#ffffff">White</option>
+                    </select>
+                </td>
+                <td>
+                    Size
+                </td>
+                <td>
+                    <select id="ddlSize">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--Script references. -->
+	<script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.3.min.js" ></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.1.0.min.js"></script>
+    <script src="signalr/hubs"></script>
+	<script src="whiteboard.js"></script>
+</body>
+</html>
