@@ -56,6 +56,7 @@ $(function () {
 		//console.log("server calling...");
 		var context = $("#mycanvas")[0].getContext('2d');
 		context.drawShape(shape, fillColor, color, size, x, y, x1, y1);
+		
 	}
 
 	$.connection.hub.start().done(function(){

@@ -1,5 +1,5 @@
 using Microsoft.AspNet.SignalR;
-namespace Whiteboard
+namespace Whiteboard.Hubs
 {
 	public class WhiteboardHub: Hub
 	{

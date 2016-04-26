@@ -1,19 +1,25 @@
 using Microsoft.AspNet.Builder;
-using Microsoft.Framework.DependencyInjection;
-using Microsoft.AspNet.StaticFiles;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace Whiteboard
 {
     public class Startup
     {
-        public void Configure(IApplicationBuilder app)
+        public void ConfigureServices(IServiceCollection services)
         {
-            app.UseServices(services =>
-            {
-				services.AddSignalR();
-            });
-			app.UseFileServer();
-			app.UseSignalR();
+            services.AddMvc();
+            services.AddSignalR();
+        }
+
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        {
+            loggerFactory.AddConsole();    
+            app.UseIISPlatformHandler();
+            app.UseStaticFiles();
+            app.UseDeveloperExceptionPage();
+            app.UseMvcWithDefaultRoute();
+            app.UseSignalR();
         }
     }
 }
