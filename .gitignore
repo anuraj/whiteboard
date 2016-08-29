@@ -1,0 +1,10 @@
+project.lock.json
+bin
+obj
+*.xproj.user
+.vs
+.vscode
+*.psm1
+*.pubxml
+*.ps1
+*.pubxml.user

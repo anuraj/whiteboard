@@ -1,4 +1,5 @@
-using Microsoft.AspNet.Mvc;
+using Microsoft.AspNetCore.Mvc;
+
 namespace Whiteboard.Controllers
 {
     public class HomeController : Controller
